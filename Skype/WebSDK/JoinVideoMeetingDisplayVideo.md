@@ -24,7 +24,7 @@ conversation.videoService.start();
 
  
   ```js
-  var conversation = client.conversations(0);
+  var conv = client.conversationsManager.conversations(0);
 var channel = conv.participants(0).video.channels(0);
 channel.stream.source.sink.container.set(document.getElementById('renderWindow')).then(function () {
     channel.isStarted.set(true);
@@ -46,7 +46,7 @@ channel2.stream.source.sink.container.set(document.getElementById('renderWindow2
 
  
   ```js
-  var conversation = client.conversations(0);
+  var conv = client.conversationsManager.conversations(0);
 var channel = conv.participants(0).video.channels(0);
 channel.stream.source.sink.container(document.getElementById('renderWindow'));
 channel.isStarted.set(false);
